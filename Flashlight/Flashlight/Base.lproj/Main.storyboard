@@ -27,6 +27,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="switchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e49-hc-jBH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +43,10 @@
                             <constraint firstItem="2i3-Cu-r4C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="pd6-UM-BMQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="flashImageView" destination="Gmc-b5-hmX" id="OF8-9D-n0e"/>
+                        <outlet property="switchButton" destination="2i3-Cu-r4C" id="ffU-ye-rGU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
