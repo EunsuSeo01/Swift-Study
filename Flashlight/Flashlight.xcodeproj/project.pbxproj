@@ -13,6 +13,7 @@
 		A24E7E9E27EADDFA00B2AC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24E7E9C27EADDFA00B2AC34 /* Main.storyboard */; };
 		A24E7EA027EADDFA00B2AC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24E7E9F27EADDFA00B2AC34 /* Assets.xcassets */; };
 		A24E7EA327EADDFA00B2AC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24E7EA127EADDFA00B2AC34 /* LaunchScreen.storyboard */; };
+		A2A45AD127EAFA4F00B8E49F /* switch.wav in Resources */ = {isa = PBXBuildFile; fileRef = A2A45AD027EAFA4F00B8E49F /* switch.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A24E7E9F27EADDFA00B2AC34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24E7EA227EADDFA00B2AC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A24E7EA427EADDFA00B2AC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A45AD027EAFA4F00B8E49F /* switch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = switch.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A24E7E9F27EADDFA00B2AC34 /* Assets.xcassets */,
 				A24E7EA127EADDFA00B2AC34 /* LaunchScreen.storyboard */,
 				A24E7EA427EADDFA00B2AC34 /* Info.plist */,
+				A2A45AD027EAFA4F00B8E49F /* switch.wav */,
 			);
 			path = Flashlight;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A45AD127EAFA4F00B8E49F /* switch.wav in Resources */,
 				A24E7EA327EADDFA00B2AC34 /* LaunchScreen.storyboard in Resources */,
 				A24E7EA027EADDFA00B2AC34 /* Assets.xcassets in Resources */,
 				A24E7E9E27EADDFA00B2AC34 /* Main.storyboard in Resources */,
