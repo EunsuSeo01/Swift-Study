@@ -22,6 +22,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 4. 앱이 종료되어도 셀의 내용이 남아있을 수 있도록(디바이스에 저장되도록) 설정
+        self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
+        
         // 1. title 설정
         title = "To Do List"
         
@@ -53,6 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource {
                     
                     // Enter new to do list item
                     DispatchQueue.main.async {
+                        // 앱이 종료되어도 셀의 내용이 남아있을 수 있도록 설정.
+                        // 이전 셀 내용 불러오기 + 현재 새로 추가되는 셀 내용 추가해서 저장하기.
+                        var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
+                        currentItems.append(text)
+                        UserDefaults.standard.setValue(currentItems, forKey: "items")
+                        
+                        // items에 인풋 텍스트 추가.
                         self?.items.append(text)
                         self?.table.reloadData()
                     }
