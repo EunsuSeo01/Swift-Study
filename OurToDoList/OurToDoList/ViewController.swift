@@ -25,8 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         // 4. 앱이 종료되어도 셀의 내용이 남아있을 수 있도록(디바이스에 저장되도록) 설정
         self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
         
-        // 1. title 설정
+        // 1. title 설정 + 색깔 보라색으로 설정!
         title = "To Do List"
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.purple]
+        self.navigationController?.navigationBar.tintColor = UIColor.purple
         
         // 2. tableView 추가
         view.addSubview(table)
@@ -47,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             field.placeholder = "Enter item..."
         }
         
-        // Cacel 버튼 생성.
+        // Cancel 버튼 생성.
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         // Done 버튼 생성 & 실행할 동작 정의.
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak self] (_) in
@@ -88,6 +90,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        // 셀의 내용을 설정.
+        // cell.textLabel이 iOS 14.0에서 deprecate 돼서
+        // iOS 14 부터는 defaultContentConfiguration()을 사용하라고 나와 있다.
         var content = cell.defaultContentConfiguration()
         content.text = items[indexPath.row]
         cell.contentConfiguration = content
