@@ -20,8 +20,52 @@ class ViewController: UIViewController {
         table.dataSource = self
     }
 
+    // Add(+) 버튼 눌렀을 때 발생하는 동작 정의.
     @IBAction func didTapAdd() {
         // Show add vc.
+        // vc를 뷰컨트롤러로 초기화.
+        guard let vc = storyboard?.instantiateViewController(identifier: "addVC") as? AddViewController else {
+            return
+        }
+        
+        // title 설정하고 large로 보이지 않게 설정.
+        vc.title = "New Reminder"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        
+        // 클로저를 통한 데이터 전달-수신.
+        vc.completion = { title, body, date in
+            DispatchQueue.main.async {
+                self.navigationController?.popToRootViewController(animated: true)
+                let newReminder = MyReminder(title: title, date: date, identifier: "id_\(title)")
+                // models 배열에 새 Reminder를 추가.
+                self.models.append(newReminder)
+                
+                // 테이블뷰 데이터 다시 불러오기.
+                self.table.reloadData()
+                
+                // 1. notification의 content 설정.
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.sound = .default
+                content.body = body
+                
+                // 2. trigger 설정.
+                let targetDate = date
+                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
+                
+                // 3. request 생성.
+                let request = UNNotificationRequest.init(identifier: "some_long_id", content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                    if error != nil {
+                        print("something went wrong")
+                    }
+                })
+            }
+        }
+        
+        // 화면 전환.
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func didTapTest() {
@@ -32,7 +76,7 @@ class ViewController: UIViewController {
                 // allow 되면 Schedule test 실행.
                 self.scheduleTest()
             }
-            else if let error = error {
+            else if error != nil {
                 // don't allow면 print.
                 print("error occurred")
             }
@@ -79,6 +123,7 @@ extension ViewController: UITableViewDataSource {
         return models.count
     }
     
+    // 셀에 각 행마다 models 배열의 해당 행의 title을 표시.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
