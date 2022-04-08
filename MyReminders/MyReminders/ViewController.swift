@@ -35,7 +35,10 @@ class ViewController: UIViewController {
         // 클로저를 통한 데이터 전달-수신.
         vc.completion = { title, body, date in
             DispatchQueue.main.async {
+                // addVC -> 메인 화면으로 다시 화면 전환.
                 self.navigationController?.popToRootViewController(animated: true)
+                
+                // 입력받은 값으로 새 reminder 생성.
                 let newReminder = MyReminder(title: title, date: date, identifier: "id_\(title)")
                 // models 배열에 새 Reminder를 추가.
                 self.models.append(newReminder)
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
                 // 테이블뷰 데이터 다시 불러오기.
                 self.table.reloadData()
                 
+                // 알림 설정.
                 // 1. notification의 content 설정.
                 let content = UNMutableNotificationContent()
                 content.title = title
@@ -64,7 +68,7 @@ class ViewController: UIViewController {
             }
         }
         
-        // 화면 전환.
+        // addVC로 화면 전환.
         navigationController?.pushViewController(vc, animated: true)
     }
 
