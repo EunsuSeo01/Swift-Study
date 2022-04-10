@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         
         table.delegate = self
         table.dataSource = self
+        
+        // UserDefaults에서 Object 가져오기.
+        if let data = UserDefaults.standard.value(forKey:"models") as? Data {
+            self.models = try! PropertyListDecoder().decode([MyReminder].self, from: data)
+        }
     }
 
     // Add(+) 버튼 눌렀을 때 발생하는 동작 정의.
@@ -42,6 +47,9 @@ class ViewController: UIViewController {
                 let newReminder = MyReminder(title: title, date: date, identifier: "id_\(title)")
                 // models 배열에 새 Reminder를 추가.
                 self.models.append(newReminder)
+                
+                // UserDafaults에 Object 저장.
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(self.models), forKey: "models")
                 
                 // 테이블뷰 데이터 다시 불러오기.
                 self.table.reloadData()
@@ -154,7 +162,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 // reminder 객체를 담을 구조체 생성.
-struct MyReminder {
+struct MyReminder: Codable {
     var title: String
     var date: Date
     var identifier: String
