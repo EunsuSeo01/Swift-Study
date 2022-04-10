@@ -130,7 +130,24 @@ extension ViewController: UITableViewDataSource {
     // 셀에 각 행마다 models 배열의 해당 행의 title을 표시.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row].title
+        
+        // cell.textLabel과 cell.detailTextLabel이 deprecated 돼서
+        // defaultContentConfiguration을 사용하여 이것들의 속성을 설정해야 한다.
+        var cellContent = cell.defaultContentConfiguration()
+        
+        // cell.textLabel 대신 사용.
+        cellContent.text = models[indexPath.row].title
+        
+        // 날짜 형식 포맷팅.
+        let date = models[indexPath.row].date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY년, MM월, dd일 a hh:mm분"
+        
+        // cell.detailTextLabel 대신 사용.
+        cellContent.secondaryText = formatter.string(from: date)
+        
+        // cell의 내용을 설정.
+        cell.contentConfiguration = cellContent
         
         return cell
     }
