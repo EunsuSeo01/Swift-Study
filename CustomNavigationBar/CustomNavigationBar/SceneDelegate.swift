@@ -12,12 +12,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-      
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController() // Your initial view controller.
-        window.makeKeyAndVisible()
-        self.window = window
+        if let windowScene = scene as? UIWindowScene {
+
+            let window = UIWindow(windowScene: windowScene)
+        
+            // 네비게이션 컨트롤러 생성!
+            let navController = UINavigationController()
+            let viewController = ViewController()   // <- ViewController.swift 파일의 그 ViewController 클래스를 뜻하는 것.
+
+            // 현재 네비게이션 스택에 있는 VC 배열 값을 설정한 것. (viewController 하나 들어있는 배열로!)
+            navController.viewControllers = [viewController]
+            // 루트 VC를 네비게이션 컨트롤러로 설정.
+            window.rootViewController = navController
+            
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
