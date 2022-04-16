@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         
         // 커스텀 네비게이션 바 설정.
         setNavigationBar()
+        
+        // 버튼의 액션을 설정.
+        nextButton.addTarget(self, action: #selector(tappedNextButton), for: .touchUpInside)
     }
 
     // MARK: - Functions
@@ -51,6 +54,17 @@ class ViewController: UIViewController {
         
         // 네비게이션 바 타이틀 설정.
         self.navigationItem.title = "title"
+    }
+    
+    // nextButton을 눌렀을 때 실행되는 메서드.
+    @objc func tappedNextButton() {
+        // next 버튼을 누르면 나올 화면. 새 뷰 컨트롤러를 생성.
+        let nextVC = UIViewController()
+        // 기본 view 배경 색 설정.
+        nextVC.view.backgroundColor = .systemBackground
+        
+        // 네비게이션 스택에 nextVC가 push 됨.
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
