@@ -16,6 +16,7 @@
 		A2CF71E62805C48F009B7344 /* OnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF71E52805C48F009B7344 /* OnboardingTests.swift */; };
 		A2CF71F02805C48F009B7344 /* OnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF71EF2805C48F009B7344 /* OnboardingUITests.swift */; };
 		A2CF71F22805C48F009B7344 /* OnboardingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF71F12805C48F009B7344 /* OnboardingUITestsLaunchTests.swift */; };
+		A2DC118E280D7F180029A263 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DC118D280D7F180029A263 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A2CF71EB2805C48F009B7344 /* OnboardingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CF71EF2805C48F009B7344 /* OnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITests.swift; sourceTree = "<group>"; };
 		A2CF71F12805C48F009B7344 /* OnboardingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2DC118D280D7F180029A263 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A2CF71D72805C48F009B7344 /* Assets.xcassets */,
 				A2CF71D92805C48F009B7344 /* LaunchScreen.storyboard */,
 				A2CF71DC2805C48F009B7344 /* Info.plist */,
+				A2DC118D280D7F180029A263 /* WelcomeViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CF71D32805C48F009B7344 /* ViewController.swift in Sources */,
+				A2DC118E280D7F180029A263 /* WelcomeViewController.swift in Sources */,
 				A2CF71CF2805C48F009B7344 /* AppDelegate.swift in Sources */,
 				A2CF71D12805C48F009B7344 /* SceneDelegate.swift in Sources */,
 			);
