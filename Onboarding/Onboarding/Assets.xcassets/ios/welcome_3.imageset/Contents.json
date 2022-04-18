@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "green_check_mark.jpeg",
+      "filename" : "welcome_3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "green_check_mark@2x.jpeg",
+      "filename" : "welcome_3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "green_check_mark@3x.jpeg",
+      "filename" : "welcome_3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
