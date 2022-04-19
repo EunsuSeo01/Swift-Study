@@ -1,5 +1,5 @@
 # Swift-Study
-자기주도적으로 Swift 공부하는 레포지토리
+### 자기주도적으로 Swift 공부하는 레포지토리
 
 - FirstFootPrint - 아래 링크의 강의를 보고 내가 조금 바꿔서 만든 내가 처음으로 개발한 iOS 어플.
 
