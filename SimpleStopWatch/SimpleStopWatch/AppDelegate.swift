@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navVC.isNavigationBarHidden = true
         window?.rootViewController = navVC
         
-        window?.backgroundColor = .systemBackground
+        window?.backgroundColor = UIColor(named: "background")
         window?.makeKeyAndVisible()
         
         return true
