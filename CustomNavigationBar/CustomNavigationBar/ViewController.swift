@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     // 커스텀 버튼 생성.
     let nextButton: UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = .yellow
-        btn.setTitle("next", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .systemYellow
+        btn.setTitle("Next", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
         btn.layer.cornerRadius = 10
         btn.translatesAutoresizingMaskIntoConstraints = false   // autoresizingMask와 auto layout의 충돌을 방지하기 위해 옵션을 꺼주는 것.
         return btn
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         // 버튼 레이아웃 설정.
         nextButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        nextButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // 커스텀 버튼을 navigationitem의 right bar button으로 설정!
         self.navigationItem.setRightBarButton(UIBarButtonItem(customView: nextButton), animated: true)
