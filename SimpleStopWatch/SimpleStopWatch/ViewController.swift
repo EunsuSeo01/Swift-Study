@@ -69,12 +69,19 @@ class ViewController: UIViewController {
         return button
     }()
     
+    // MARK: - Properties
+    
+    // stop watch가 작동 중인지 아닌지.
+    lazy var isRunning = false
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // reset 버튼 액션 연결.
+        // 각 버튼의 액션을 연결.
+        playButton.addTarget(self, action: #selector(startStopWatch), for: .touchUpInside)
+        pauseButton.addTarget(self, action: #selector(pauseStopWatch), for: .touchUpInside)
         resetButton.addTarget(self, action: #selector(resetSeconds), for: .touchUpInside)
     }
 
@@ -124,6 +131,28 @@ class ViewController: UIViewController {
         // resetButton 레이아웃 설정.
         resetButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         resetButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30).isActive = true
+    }
+    
+    // play 버튼 누르면 stop watch 시작!
+    @objc func startStopWatch() {
+        isRunning = true
+        
+        // 0.1초 시간 간격. -> 0.1초가 10번 지나면 1초.
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (Timer) in
+            // stop watch가 작동 중이면,
+            // 0.1초마다 label의 텍스트도 0.1을 더한 숫자가 보이도록 설정한다.
+            if self.isRunning {
+                self.secondsLabel.text = String(format: "%.1f", Double(self.secondsLabel.text!)! + 0.1)
+                print ("\(self.secondsLabel.text!) seconds")
+            } else {
+                Timer.invalidate()
+            }
+        }
+    }
+    
+    // pause 버튼 누르면 stop watch 멈춤. (작동 중 아님)
+    @objc func pauseStopWatch() {
+        isRunning = false
     }
     
     // seconds를 reset 한다.
