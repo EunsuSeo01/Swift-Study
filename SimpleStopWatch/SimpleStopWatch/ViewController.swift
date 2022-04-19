@@ -60,10 +60,22 @@ class ViewController: UIViewController {
         return button
     }()
     
+    // reset 버튼 생성.
+    lazy var resetButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Reset", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // reset 버튼 액션 연결.
+        resetButton.addTarget(self, action: #selector(resetSeconds), for: .touchUpInside)
     }
 
     override func viewDidLayoutSubviews() {
@@ -79,6 +91,7 @@ class ViewController: UIViewController {
         view.addSubview(secondsLabel)
         view.addSubview(playView)
         view.addSubview(pauseView)
+        view.addSubview(resetButton)
         
         // 버튼을 해당하는 view의 서브뷰로 추가.
         playView.addSubview(playButton)
@@ -107,6 +120,15 @@ class ViewController: UIViewController {
         // pauseButton 레이아웃 설정.
         pauseButton.centerXAnchor.constraint(equalTo: pauseView.centerXAnchor).isActive = true
         pauseButton.centerYAnchor.constraint(equalTo: pauseView.centerYAnchor).isActive = true
+        
+        // resetButton 레이아웃 설정.
+        resetButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        resetButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30).isActive = true
+    }
+    
+    // seconds를 reset 한다.
+    @objc func resetSeconds() {
+        secondsLabel.text = "0.0"
     }
 }
 
