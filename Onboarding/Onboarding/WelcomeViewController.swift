@@ -19,8 +19,12 @@ class WelcomeViewController: UIViewController {
         
     }
     
+    /// viewDidLayoutSubviews()
+    /// - layout이 결정된 후에 실행되는 메서드.
+    /// - 뷰의 bounds(경계)가 변경될 때마다 호출되는 메서드.
+    /// - 뷰가 서브 뷰들의 배치를 조정한 직후에 하고 싶은 작업이 있을 때 사용한다.
     override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        super.viewDidLayoutSubviews()   // viewDidLayoutSubviews()의 default implementation은 nothing이기 때문에 이 줄은 안 써줘도 된다고 함.
         configure()
     }
     
