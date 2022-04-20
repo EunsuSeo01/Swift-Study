@@ -9,6 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    // 폰트의 이름을 담은 배열 생성.
+    private let labelFonts = ["MFZhiHei_Noncommercial-Regular", "MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular"]
+    
+    // 배열의 인덱스 위치를 가리킬 변수 생성.
+    lazy var index = 1
+    
     // MARK: - Subviews
     
     // 스크롤뷰 생성. -> 세로 스크롤을 위해
@@ -43,10 +51,10 @@ class ViewController: UIViewController {
     // 메인 레이블 생성.
     lazy var mainLabel: UILabel = {
         let label = UILabel()
-        label.text = "30 Days Swift\n\n30일 동안 열심히 해서\n\n30개 다 잘 완성해 보도록 하겠습니다.\n\niOS 개발 너무 재밌는 것 같아요!\n\n진심입니다 😊"
+        label.text = "30 Days Swift\n\nabcdefghi\n\njklmnopqrs\n\ntuvwxyz\n\nHello World! 😊"
         label.numberOfLines = 0
         label.textColor = .white
-        label.font = .systemFont(ofSize: 17)
+        label.font = UIFont(name: labelFonts[0], size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -58,6 +66,9 @@ class ViewController: UIViewController {
         
         // 네비게이션 바 설정.
         setNavi()
+        
+        // 버튼 액션 연결.
+        circleButton.addTarget(self, action: #selector(tappedCircleButton), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -102,6 +113,7 @@ class ViewController: UIViewController {
             scroll.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             scroll.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             scroll.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+        
             innerView.topAnchor.constraint(equalTo: scroll.contentLayoutGuide.topAnchor),
             innerView.leftAnchor.constraint(equalTo: scroll.contentLayoutGuide.leftAnchor),
             innerView.rightAnchor.constraint(equalTo: scroll.contentLayoutGuide.rightAnchor),
@@ -126,5 +138,13 @@ class ViewController: UIViewController {
         ])
     }
         
+    // MARK: - Action
+    
+    // 버튼 눌렀을 때 실행되는 동작.
+    @objc func tappedCircleButton() {
+        // 배열에 든 3개의 폰트를 돌아가면서 보여준다.
+        mainLabel.font = UIFont(name: labelFonts[index % 3], size: 17)
+        index += 1
+    }
 }
 

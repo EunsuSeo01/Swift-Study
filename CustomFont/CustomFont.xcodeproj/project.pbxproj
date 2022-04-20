@@ -14,7 +14,6 @@
 		A2D11146281037BC00CF31E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D11144281037BC00CF31E0 /* LaunchScreen.storyboard */; };
 		A2D1115228103C3900CF31E0 /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2D1114E28103C3900CF31E0 /* MFZhiHei_Noncommercial-Regular.ttf */; };
 		A2D1115328103C3900CF31E0 /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2D1114F28103C3900CF31E0 /* MFJinHei_Noncommercial-Regular.ttf */; };
-		A2D1115428103C3900CF31E0 /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2D1115028103C3900CF31E0 /* Gaspar Regular.otf */; };
 		A2D1115528103C3900CF31E0 /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2D1115128103C3900CF31E0 /* MFTongXin_Noncommercial-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		A2D11147281037BC00CF31E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D1114E28103C3900CF31E0 /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 		A2D1114F28103C3900CF31E0 /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
-		A2D1115028103C3900CF31E0 /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
 		A2D1115128103C3900CF31E0 /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +74,6 @@
 		A2D1114D28103BE800CF31E0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A2D1115028103C3900CF31E0 /* Gaspar Regular.otf */,
 				A2D1114F28103C3900CF31E0 /* MFJinHei_Noncommercial-Regular.ttf */,
 				A2D1115128103C3900CF31E0 /* MFTongXin_Noncommercial-Regular.ttf */,
 				A2D1114E28103C3900CF31E0 /* MFZhiHei_Noncommercial-Regular.ttf */,
@@ -142,7 +139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D1115428103C3900CF31E0 /* Gaspar Regular.otf in Resources */,
 				A2D11146281037BC00CF31E0 /* LaunchScreen.storyboard in Resources */,
 				A2D1115328103C3900CF31E0 /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
 				A2D1115228103C3900CF31E0 /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
