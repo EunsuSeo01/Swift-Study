@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Subviews
+    
     // 버튼 생성.
     lazy var circleButton: UIButton = {
         let button = UIButton()
@@ -24,15 +26,24 @@ class ViewController: UIViewController {
         return button
     }()
     
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 네비게이션 바 설정.
+        setNavi()
     }
     
     override func viewDidLayoutSubviews() {
-        setNavi()
+        // 서브뷰 설정.
         setSubviews()
     }
-
+    
+    // MARK: - Functions
+    
+    // 네비게이션 바 설정.
     func setNavi() {
         // 네비게이션 바 타이틀 설정.
         self.navigationItem.title = "Custom Font"
@@ -43,7 +54,7 @@ class ViewController: UIViewController {
         
         navigationBarAppearance.titleTextAttributes = [
             .foregroundColor: UIColor.white,    // title 색 변경.
-            .font: UIFont(name: "Arial", size: 15)!     // title size 변경.
+            .font: UIFont(name: "Arial", size: 17)!     // title size 변경.
         ]
         
         self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
