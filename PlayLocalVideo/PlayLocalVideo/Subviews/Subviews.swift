@@ -9,6 +9,7 @@ import UIKit
 
 class Subviews {
     
+    // 필요한 서브뷰들을 생성한다.
     lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
@@ -21,5 +22,12 @@ class Subviews {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
+    // 테이블뷰 생성!
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .black
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
 }

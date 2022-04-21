@@ -13,6 +13,8 @@
 		A2FAF5B92811A59300EC8DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2FAF5B82811A59300EC8DAC /* Assets.xcassets */; };
 		A2FAF5BC2811A59300EC8DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2FAF5BA2811A59300EC8DAC /* LaunchScreen.storyboard */; };
 		A2FAF5C42811A6A900EC8DAC /* Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5C32811A6A900EC8DAC /* Subviews.swift */; };
+		A2FAF5C82811B4CB00EC8DAC /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5C72811B4CB00EC8DAC /* CustomTableViewCell.swift */; };
+		A2FAF5CC2811B92500EC8DAC /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5CB2811B92500EC8DAC /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A2FAF5BB2811A59300EC8DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2FAF5BD2811A59300EC8DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2FAF5C32811A6A900EC8DAC /* Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subviews.swift; sourceTree = "<group>"; };
+		A2FAF5C72811B4CB00EC8DAC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A2FAF5CB2811B92500EC8DAC /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2C21F892811C0930036C432 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2FAF5CB2811B92500EC8DAC /* VideoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2C21F8A2811C0B10036C432 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2FAF5B32811A59300EC8DAC /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A2FAF5A32811A59300EC8DAC = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +76,33 @@
 		A2FAF5AE2811A59300EC8DAC /* PlayLocalVideo */ = {
 			isa = PBXGroup;
 			children = (
+				A2C21F8A2811C0B10036C432 /* ViewController */,
+				A2C21F892811C0930036C432 /* Models */,
+				A2FAF5CA2811B4E100EC8DAC /* Subviews */,
+				A2FAF5C92811B4D500EC8DAC /* TableView */,
 				A2FAF5AF2811A59300EC8DAC /* AppDelegate.swift */,
 				A2FAF5B12811A59300EC8DAC /* SceneDelegate.swift */,
-				A2FAF5B32811A59300EC8DAC /* ViewController.swift */,
-				A2FAF5C32811A6A900EC8DAC /* Subviews.swift */,
 				A2FAF5B82811A59300EC8DAC /* Assets.xcassets */,
 				A2FAF5BA2811A59300EC8DAC /* LaunchScreen.storyboard */,
 				A2FAF5BD2811A59300EC8DAC /* Info.plist */,
 			);
 			path = PlayLocalVideo;
+			sourceTree = "<group>";
+		};
+		A2FAF5C92811B4D500EC8DAC /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A2FAF5C72811B4CB00EC8DAC /* CustomTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A2FAF5CA2811B4E100EC8DAC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A2FAF5C32811A6A900EC8DAC /* Subviews.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FAF5C82811B4CB00EC8DAC /* CustomTableViewCell.swift in Sources */,
+				A2FAF5CC2811B92500EC8DAC /* VideoModel.swift in Sources */,
 				A2FAF5B42811A59300EC8DAC /* ViewController.swift in Sources */,
 				A2FAF5C42811A6A900EC8DAC /* Subviews.swift in Sources */,
 				A2FAF5B02811A59300EC8DAC /* AppDelegate.swift in Sources */,
