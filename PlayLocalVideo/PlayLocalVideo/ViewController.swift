@@ -9,15 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Subviews
+    
     lazy var scrollView = Subviews().scrollView
     lazy var innerView = Subviews().innerView
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavi()
     }
 
     override func viewDidLayoutSubviews() {
         setSubviews()
+    }
+    
+    // MARK: - Functions
+    
+    func setNavi() {
+        self.navigationItem.title = "Watch Later"
+        
+        let naviAppearance = UINavigationBarAppearance()
+        naviAppearance.backgroundColor = UIColor(named: "NaviColor")
+        naviAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.standardAppearance = naviAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = naviAppearance
     }
     
     func setSubviews() {
