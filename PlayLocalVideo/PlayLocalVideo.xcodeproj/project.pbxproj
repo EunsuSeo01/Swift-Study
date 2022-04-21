@@ -12,6 +12,7 @@
 		A2FAF5B42811A59300EC8DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5B32811A59300EC8DAC /* ViewController.swift */; };
 		A2FAF5B92811A59300EC8DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2FAF5B82811A59300EC8DAC /* Assets.xcassets */; };
 		A2FAF5BC2811A59300EC8DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2FAF5BA2811A59300EC8DAC /* LaunchScreen.storyboard */; };
+		A2FAF5C42811A6A900EC8DAC /* Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5C32811A6A900EC8DAC /* Subviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A2FAF5B82811A59300EC8DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2FAF5BB2811A59300EC8DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2FAF5BD2811A59300EC8DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2FAF5C32811A6A900EC8DAC /* Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A2FAF5AF2811A59300EC8DAC /* AppDelegate.swift */,
 				A2FAF5B12811A59300EC8DAC /* SceneDelegate.swift */,
 				A2FAF5B32811A59300EC8DAC /* ViewController.swift */,
+				A2FAF5C32811A6A900EC8DAC /* Subviews.swift */,
 				A2FAF5B82811A59300EC8DAC /* Assets.xcassets */,
 				A2FAF5BA2811A59300EC8DAC /* LaunchScreen.storyboard */,
 				A2FAF5BD2811A59300EC8DAC /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2FAF5B42811A59300EC8DAC /* ViewController.swift in Sources */,
+				A2FAF5C42811A6A900EC8DAC /* Subviews.swift in Sources */,
 				A2FAF5B02811A59300EC8DAC /* AppDelegate.swift in Sources */,
 				A2FAF5B22811A59300EC8DAC /* SceneDelegate.swift in Sources */,
 			);
