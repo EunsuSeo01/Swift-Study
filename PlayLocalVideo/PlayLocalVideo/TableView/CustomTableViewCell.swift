@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -15,18 +17,28 @@ class CustomTableViewCell: UITableViewCell {
     lazy var videoLabel = Subviews().videoLabel
     lazy var videoInfo = Subviews().videoInfo
     
+    // 필요한 VC들.
+    lazy var vc = ViewController()
+    lazy var videoVC = VideoViewController()
+    
     // 초기화 함수.
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        // 셀 서브뷰들 레이아웃 설정.
         setUpCell()
+        // 버튼과 로직 연결.
+        videoPlayButton.addTarget(self, action: #selector(tappedPlayButton), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        // 셀 서브뷰들 레이아웃 설정.
         setUpCell()
+        // 버튼과 로직 연결.
+        videoPlayButton.addTarget(self, action: #selector(tappedPlayButton), for: .touchUpInside)
     }
     
-    // 셀 내부 뷰들 레이아웃 설정.
+    // 셀 서브뷰들 레이아웃 설정.
     func setUpCell() {
         contentView.addSubview(videoImageView)
         contentView.addSubview(videoPlayButton)
@@ -48,5 +60,14 @@ class CustomTableViewCell: UITableViewCell {
             videoInfo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             videoInfo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
         ])
+    }
+    
+    // 버튼을 누르면 아래에서 화면이 올라오고 비디오가 재생된다.
+    @objc func tappedPlayButton() {
+        print("click")
+        // 전체화면으로.
+        videoVC.modalPresentationStyle = .fullScreen
+        // 비디오가 재생될 화면을 띄워준다.
+        self.window?.rootViewController?.present(videoVC, animated: true, completion: nil)
     }
 }
