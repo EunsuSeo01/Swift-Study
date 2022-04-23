@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        self.view.backgroundColor = .white
-
+    override func viewDidLayoutSubviews() {
         view.addSubview(mainButton)
         mainButton.addSubview(mainLabel)
         
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
         mainLabel.centerXAnchor.constraint(equalTo: mainButton.centerXAnchor).isActive = true
         mainLabel.centerYAnchor.constraint(equalTo: mainButton.centerYAnchor).isActive = true
     }
-
 
 }
 
