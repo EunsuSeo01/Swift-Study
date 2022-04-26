@@ -17,10 +17,9 @@ class CustomTableViewCell: UITableViewCell {
     lazy var videoLabel = Subviews().videoLabel
     lazy var videoInfo = Subviews().videoInfo
     
-    // 필요한 VC들.
-    lazy var vc = ViewController()
-    lazy var videoVC = VideoViewController()
-    
+    // 버튼의 기능을 정의할 클로저를 셀의 프로퍼티로 생성.
+    var playButtonAction : (() -> ())?
+
     // 초기화 함수.
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -62,12 +61,9 @@ class CustomTableViewCell: UITableViewCell {
         ])
     }
     
-    // 버튼을 누르면 아래에서 화면이 올라오고 비디오가 재생된다.
+    // 버튼을 누르면 비디오가 재생된다.
     @objc func tappedPlayButton() {
-        print("click")
-        // 전체화면으로.
-        videoVC.modalPresentationStyle = .fullScreen
-        // 비디오가 재생될 화면을 띄워준다.
-        self.window?.rootViewController?.present(videoVC, animated: true, completion: nil)
+        print("User Action : button clicked")
+        playButtonAction?()
     }
 }

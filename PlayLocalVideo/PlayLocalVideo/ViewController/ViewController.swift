@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("1st : viewDidLoad")
         
         // 네비게이션 바 설정.
         setNavi()
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
+        print("1st : viewDidLayoutSubviews")
         // 서브뷰 레이아웃 설정.
         setSubviews()
         // 테이블뷰 구성.
@@ -72,6 +76,8 @@ class ViewController: UIViewController {
         ])
     }
     
+    // MARK: - Table View
+    
     // 테이블뷰 구성.
     func configureTableView() {
         innerView.addSubview(tableView)
@@ -95,6 +101,40 @@ class ViewController: UIViewController {
     func registerTableView() {
         tableView.register(CustomTableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
     }
+    
+    // MARK: - AVPlayer
+    
+    // 비디오 재생.
+    private func playVideo() {
+        print("func : play video")
+
+        let playerController = AVPlayerViewController()
+        
+        // 비디오 path 설정.
+        guard let path = Bundle.main.path(forResource: "emoji zone", ofType:"mp4") else {
+            debugPrint("emoji zone.mp4 not found")
+            return
+        }
+        
+        // player 생성.
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        playerController.player = player
+        
+        // 비디오가 끝났는지 확인하는 옵저버 생성.
+        NotificationCenter.default.addObserver(self, selector: #selector(finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        
+        // 비디오 재생. -> playerController를 present 시킴으로써 비디오가 재생되는 것이다 !!
+        present(playerController, animated: true) {
+            player.play()
+        }
+    }
+    
+    // 비디오가 끝났으면 playerController를 dismiss 시킨다.
+    @objc func finishVideo() {
+        print("func : finishVideo")
+        dismiss(animated: true, completion: nil)
+    }
+
 }
 
 // VC 기능 확장.
@@ -104,7 +144,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return videos.count
     }
     
-    // cell 안의 내용 설정.
+    // 셀 안의 내용 설정.
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CustomTableViewCell else {
             preconditionFailure("테이블 뷰 가져오기 실패")
@@ -113,6 +153,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.videoImageView.image = UIImage(named: videos[indexPath.row].videoImagePath)
         cell.videoLabel.text = videos[indexPath.row].videoLabel
         cell.videoInfo.text = videos[indexPath.row].videoInfo
+        
+        // 셀 안의 버튼을 눌렀을 때 실행될 기능을 클로저를 통해 구현한 것이다 !!
+        cell.playButtonAction = { [unowned self] in
+            // 기능 구현 위치.
+            print("playVideo in closure")
+            // 비디오 재생.
+            playVideo()
+        }
         
         return cell
     }

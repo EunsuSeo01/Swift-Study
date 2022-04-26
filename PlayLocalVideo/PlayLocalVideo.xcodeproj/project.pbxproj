@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A202617C2812F68D003277B0 /* emoji zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A202617B2812F68D003277B0 /* emoji zone.mp4 */; };
-		A20261802812FC7B003277B0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A202617F2812FC7B003277B0 /* VideoViewController.swift */; };
 		A2FAF5B02811A59300EC8DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5AF2811A59300EC8DAC /* AppDelegate.swift */; };
 		A2FAF5B22811A59300EC8DAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5B12811A59300EC8DAC /* SceneDelegate.swift */; };
 		A2FAF5B42811A59300EC8DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAF5B32811A59300EC8DAC /* ViewController.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		A202617B2812F68D003277B0 /* emoji zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "emoji zone.mp4"; sourceTree = "<group>"; };
-		A202617F2812FC7B003277B0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A2FAF5AC2811A59300EC8DAC /* PlayLocalVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayLocalVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FAF5AF2811A59300EC8DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2FAF5B12811A59300EC8DAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				A2FAF5B32811A59300EC8DAC /* ViewController.swift */,
-				A202617F2812FC7B003277B0 /* VideoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2FAF5C82811B4CB00EC8DAC /* CustomTableViewCell.swift in Sources */,
-				A20261802812FC7B003277B0 /* VideoViewController.swift in Sources */,
 				A2FAF5CC2811B92500EC8DAC /* VideoModel.swift in Sources */,
 				A2FAF5B42811A59300EC8DAC /* ViewController.swift in Sources */,
 				A2FAF5C42811A6A900EC8DAC /* Subviews.swift in Sources */,
