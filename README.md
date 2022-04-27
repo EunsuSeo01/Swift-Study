@@ -13,5 +13,6 @@
 | [CollectionViewTest](https://github.com/EunsuSeo01/Swift-Study/tree/main/CollectionViewTest) | iOS Team Landing Page Project 를 하는 중에 Collection View로 Carousel Slider를 만드는 것에 계속 어려움을 겪었어서 새 프로젝트로 딱 Collection View만 만들어보려고 테스트 해 본 프로젝트 | ✅ |
 | [Components](https://github.com/EunsuSeo01/Swift-Study/tree/main/Components) | 코드로 Components를 구현하는 방법에 대해 블로그에 설명하기 위해 직접 해본 프로젝트 | ⬜ |
 | [CustomNavigationBar](https://github.com/EunsuSeo01/Swift-Study/tree/main/CustomNavigationBar) | 코드로 Navigation Bar를 커스텀 하는 방법을 블로그에 설명하기 위해 직접 해본 프로젝트 | ✅ |
-| [SimpleStopWatch](https://github.com/EunsuSeo01/Swift-Study/tree/main/SimpleStopWatch) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 첫 번째 프로젝트 gif만 보고 직접 구현해본 프로젝트 | ✅ |
-| [CustomFont](https://github.com/EunsuSeo01/Swift-Study/tree/main/CustomFont) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 두 번째 프로젝트 gif만 보고 직접 구현해본 프로젝트 | ✅ |
+| [SimpleStopWatch](https://github.com/EunsuSeo01/Swift-Study/tree/main/SimpleStopWatch) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 첫 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
+| [CustomFont](https://github.com/EunsuSeo01/Swift-Study/tree/main/CustomFont) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 두 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
+| [PlayLocalVideo](https://github.com/EunsuSeo01/Swift-Study/tree/main/PlayLocalVideo) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 세 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
