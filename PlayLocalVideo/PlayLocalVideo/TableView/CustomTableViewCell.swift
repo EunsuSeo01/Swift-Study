@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 
 class CustomTableViewCell: UITableViewCell {
     
