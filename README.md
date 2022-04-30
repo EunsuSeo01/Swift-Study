@@ -16,3 +16,4 @@
 | [SimpleStopWatch](https://github.com/EunsuSeo01/Swift-Study/tree/main/SimpleStopWatch) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 첫 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
 | [CustomFont](https://github.com/EunsuSeo01/Swift-Study/tree/main/CustomFont) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 두 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
 | [PlayLocalVideo](https://github.com/EunsuSeo01/Swift-Study/tree/main/PlayLocalVideo) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 세 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
+| [SnapChatMenu](https://github.com/EunsuSeo01/Swift-Study/tree/main/SnapChatMenu) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 네 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ⬜ |
