@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A213D72E281C310A00BFF2B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A213D72D281C310A00BFF2B1 /* Assets.xcassets */; };
+		A213D772281C375200BFF2B1 /* Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213D771281C375200BFF2B1 /* Subviews.swift */; };
+		A2314A8A281D7490005742EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2314A89281D7490005742EF /* SecondViewController.swift */; };
+		A2314A8C281D78C9005742EF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2314A8B281D78C9005742EF /* CameraViewController.swift */; };
 		A2CE42E328194739009BB02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE42E228194739009BB02F /* AppDelegate.swift */; };
 		A2CE42E728194739009BB02F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE42E628194739009BB02F /* ViewController.swift */; };
-		A2CE42EC28194739009BB02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CE42EB28194739009BB02F /* Assets.xcassets */; };
 		A2CE42EF28194739009BB02F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CE42ED28194739009BB02F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A213D72D281C310A00BFF2B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/30DaysofSwift-master/Project 04 - SnapChatMenu/Snapchat Menu/Assets.xcassets"; sourceTree = "<group>"; };
+		A213D771281C375200BFF2B1 /* Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subviews.swift; sourceTree = "<group>"; };
+		A2314A89281D7490005742EF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A2314A8B281D78C9005742EF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A2CE42DF28194739009BB02F /* SnapChatMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChatMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CE42E228194739009BB02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CE42E628194739009BB02F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2CE42EB28194739009BB02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CE42EE28194739009BB02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CE42F028194739009BB02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,9 +58,12 @@
 		A2CE42E128194739009BB02F /* SnapChatMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A213D72D281C310A00BFF2B1 /* Assets.xcassets */,
 				A2CE42E228194739009BB02F /* AppDelegate.swift */,
+				A213D771281C375200BFF2B1 /* Subviews.swift */,
 				A2CE42E628194739009BB02F /* ViewController.swift */,
-				A2CE42EB28194739009BB02F /* Assets.xcassets */,
+				A2314A89281D7490005742EF /* SecondViewController.swift */,
+				A2314A8B281D78C9005742EF /* CameraViewController.swift */,
 				A2CE42ED28194739009BB02F /* LaunchScreen.storyboard */,
 				A2CE42F028194739009BB02F /* Info.plist */,
 			);
@@ -120,7 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CE42EF28194739009BB02F /* LaunchScreen.storyboard in Resources */,
-				A2CE42EC28194739009BB02F /* Assets.xcassets in Resources */,
+				A213D72E281C310A00BFF2B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2314A8A281D7490005742EF /* SecondViewController.swift in Sources */,
+				A2314A8C281D78C9005742EF /* CameraViewController.swift in Sources */,
+				A213D772281C375200BFF2B1 /* Subviews.swift in Sources */,
 				A2CE42E728194739009BB02F /* ViewController.swift in Sources */,
 				A2CE42E328194739009BB02F /* AppDelegate.swift in Sources */,
 			);
