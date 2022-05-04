@@ -6,31 +6,25 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CameraViewController: UIViewController {
-
-    // 테스트용 label 생성.
-    let label: UILabel = {
-        let label = UILabel()
-        label.text = "Camera"
-        label.font = UIFont.systemFont(ofSize: 30)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    
+    // MARK: - Properties
+    
+    private lazy var captureDevice = AVCaptureDevice.default(for: .video)
+    private var session: AVCaptureSession?
+    private lazy var output = AVCapturePhotoOutput()
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
-        // label을 view에 추가.
         super.viewDidLoad()
 
-        // label 레이아웃 설정.
-        view.addSubview(label)
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
         // 제스쳐 인식기 생성하고 추가.
         swipeRecognizer()
+        // 카메라 세팅.
+        settingCamera()
     }
     
     // MARK: - Functions
@@ -57,6 +51,44 @@ class CameraViewController: UIViewController {
         }
     }
     
-    // Camera
-
+    // 카메라 세팅.
+    func settingCamera() {
+        guard let captureDevice = captureDevice else {
+            return
+        }
+        
+        do {
+            // session 생성.
+            session = AVCaptureSession()
+            session?.sessionPreset = .photo
+            
+            // 인풋 생성.
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            
+            // session에 인풋 아웃풋 설정.
+            session?.addInput(input)
+            session?.addOutput(output)
+        } catch {
+            print(error)
+        }
+        
+        guard let session = session else {
+            return
+        }
+        
+        // session을 통해 preview layer 생성.
+        // AVCaptureVideoPreviewLayer를 통해서 카메라가 현재 찍고있는 물체를 보여준다.
+        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        // 카메라 화면 프레임 설정.
+        previewLayer.frame = view.frame
+        // 카메라 화면이 전체 화면이 되도록 설정.
+        previewLayer.videoGravity = .resizeAspectFill
+        
+        // preview layer를 view의 서브 레이어로 추가.
+        view.layer.addSublayer(previewLayer)
+        
+        // session 시작.
+        session.startRunning()
+    }
+    
 }

@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     // TODO: swipeRecognizer()랑 respondToSwipeGesture() 함수가 VC 파일에서 다 공통으로 쓰이는데 중복을 줄일 방법 뭐 없나?
-    // view가 오른쪽에서 왼쪽으로 스와이프 하는 제스쳐를 인식할 수 있도록 Recognizer를 추가한다.
+    // view가 오른쪽에서 왼쪽으로 스와이프 하는 제스쳐를 인식할 수 있도록 UISwipeGestureRecognizer를 추가한다.
     func swipeRecognizer() {
         // 제스쳐 인식기 생성. (왼쪽으로 스와이프)
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
