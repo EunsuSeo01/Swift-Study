@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
     // MARK: - Subviews
     
-    let leftView = Subviews.leftView
+    lazy var leftView = UIImageView(image: UIImage(named: "left"))
     
     // MARK: - Life Cycle
     
@@ -24,24 +25,20 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         // 서브뷰 레이아웃 설정.
-        setupSubviews()
+        setupLayout()
     }
     
     // MARK: - Functions
     
     // 서브뷰 레이아웃 설정.
-    func setupSubviews() {
+    func setupLayout() {
         view.addSubview(leftView)
         
-        NSLayoutConstraint.activate([
-            leftView.topAnchor.constraint(equalTo: view.topAnchor),
-            leftView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            leftView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            leftView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                                    ])
+        leftView.snp.makeConstraints { make in
+            make.top.left.right.bottom.equalToSuperview()
+        }
     }
     
-    // TODO: swipeRecognizer()랑 respondToSwipeGesture() 함수가 VC 파일에서 다 공통으로 쓰이는데 중복을 줄일 방법 뭐 없나?
     // view가 오른쪽에서 왼쪽으로 스와이프 하는 제스쳐를 인식할 수 있도록 UISwipeGestureRecognizer를 추가한다.
     func swipeRecognizer() {
         // 제스쳐 인식기 생성. (왼쪽으로 스와이프)

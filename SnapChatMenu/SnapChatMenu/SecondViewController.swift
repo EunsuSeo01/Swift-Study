@@ -11,7 +11,7 @@ class SecondViewController: UIViewController {
     
     // MARK: - Subviews
     
-    let rightView = Subviews.rightView
+    lazy var rightView = UIImageView(image: UIImage(named: "right"))
     
     // MARK: - Life Cycle
     
@@ -24,21 +24,18 @@ class SecondViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         // 서브뷰 레이아웃 설정.
-        setupSubviews()
+        setupLayout()
     }
 
     // MARK: - Functions
     
     // 서브뷰 레이아웃 설정.
-    func setupSubviews() {
+    func setupLayout() {
         view.addSubview(rightView)
         
-        NSLayoutConstraint.activate([
-            rightView.topAnchor.constraint(equalTo: view.topAnchor),
-            rightView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            rightView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            rightView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                                    ])
+        rightView.snp.makeConstraints { make in
+            make.top.left.right.bottom.equalToSuperview()
+        }
     }
 
     // 제스쳐 인식기 생성하고 추가.
