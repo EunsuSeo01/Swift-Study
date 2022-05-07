@@ -16,5 +16,6 @@
 | [SimpleStopWatch](https://github.com/EunsuSeo01/Swift-Study/tree/main/SimpleStopWatch) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 첫 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
 | [CustomFont](https://github.com/EunsuSeo01/Swift-Study/tree/main/CustomFont) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 두 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
 | [PlayLocalVideo](https://github.com/EunsuSeo01/Swift-Study/tree/main/PlayLocalVideo) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 세 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
-| [SnapChatMenu](https://github.com/EunsuSeo01/Swift-Study/tree/main/SnapChatMenu) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 네 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ⬜ |
+| [SnapChatMenu](https://github.com/EunsuSeo01/Swift-Study/tree/main/SnapChatMenu) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 네 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
 | [MemoService](https://github.com/EunsuSeo01/Swift-Study/tree/main/MemoService) | [빡코딩콘 메모 어플](https://www.youtube.com/post/Ugkx0DOplomS1OFMeq3meB9SGTD24WqpJkbA)의 요건에 맞는 메모 서비스 만들어보기 | ⬜ |
+| [CarouselEffect](https://github.com/EunsuSeo01/Swift-Study/tree/main/CarouselEffect) | [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift)의 다섯 번째 프로젝트의 gif만 보고 직접 구현해본 프로젝트 | ✅ |
