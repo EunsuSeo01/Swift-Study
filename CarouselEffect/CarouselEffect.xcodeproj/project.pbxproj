@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91CC95B63A4FC4F93D5208E9 /* Pods_CarouselEffect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550DC099CD6F522F4844480 /* Pods_CarouselEffect.framework */; };
 		A24D64BB2826BBB100C335DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64BA2826BBB100C335DE /* AppDelegate.swift */; };
-		A24D64BD2826BBB100C335DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64BC2826BBB100C335DE /* SceneDelegate.swift */; };
 		A24D64BF2826BBB100C335DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64BE2826BBB100C335DE /* ViewController.swift */; };
 		A24D64C22826BBB100C335DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24D64C02826BBB100C335DE /* Main.storyboard */; };
-		A24D64C42826BBB200C335DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24D64C32826BBB200C335DE /* Assets.xcassets */; };
 		A24D64C72826BBB200C335DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24D64C52826BBB200C335DE /* LaunchScreen.storyboard */; };
+		A24D64CF2826BC3E00C335DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24D64CE2826BC3E00C335DE /* Assets.xcassets */; };
+		A24D64D22826BDBD00C335DE /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64D02826BDBD00C335DE /* CustomCollectionViewCell.swift */; };
+		A24D64D32826BDBD00C335DE /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D64D12826BDBD00C335DE /* CustomCollectionViewCell.xib */; };
+		A24D64D62826DDCC00C335DE /* CarouselDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64D52826DDCC00C335DE /* CarouselDataModel.swift */; };
+		A24D64D82826E49200C335DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D64D72826E49200C335DE /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2947A0196AFE82A9DFAC619E /* Pods-CarouselEffect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselEffect.release.xcconfig"; path = "Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect.release.xcconfig"; sourceTree = "<group>"; };
 		A24D64B72826BBB100C335DE /* CarouselEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarouselEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24D64BA2826BBB100C335DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A24D64BC2826BBB100C335DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A24D64BE2826BBB100C335DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A24D64C12826BBB100C335DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A24D64C32826BBB200C335DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24D64C62826BBB200C335DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A24D64C82826BBB200C335DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24D64CE2826BC3E00C335DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/30DaysofSwift-master/Project 05 - CarouselEffect/Carousel Effect/Assets.xcassets"; sourceTree = "<group>"; };
+		A24D64D02826BDBD00C335DE /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		A24D64D12826BDBD00C335DE /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		A24D64D52826DDCC00C335DE /* CarouselDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDataModel.swift; sourceTree = "<group>"; };
+		A24D64D72826E49200C335DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A550DC099CD6F522F4844480 /* Pods_CarouselEffect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarouselEffect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E302A1A26CD552241EC850 /* Pods-CarouselEffect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselEffect.debug.xcconfig"; path = "Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CC95B63A4FC4F93D5208E9 /* Pods_CarouselEffect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F535C86208C14C6E6100721 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A550DC099CD6F522F4844480 /* Pods_CarouselEffect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C344384CC7FDC52D4249749 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4E302A1A26CD552241EC850 /* Pods-CarouselEffect.debug.xcconfig */,
+				2947A0196AFE82A9DFAC619E /* Pods-CarouselEffect.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A24D64AE2826BBB100C335DE = {
 			isa = PBXGroup;
 			children = (
 				A24D64B92826BBB100C335DE /* CarouselEffect */,
 				A24D64B82826BBB100C335DE /* Products */,
+				9C344384CC7FDC52D4249749 /* Pods */,
+				4F535C86208C14C6E6100721 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +87,25 @@
 			isa = PBXGroup;
 			children = (
 				A24D64BA2826BBB100C335DE /* AppDelegate.swift */,
-				A24D64BC2826BBB100C335DE /* SceneDelegate.swift */,
+				A24D64D72826E49200C335DE /* SceneDelegate.swift */,
+				A24D64D42826DD7800C335DE /* Cell */,
 				A24D64BE2826BBB100C335DE /* ViewController.swift */,
+				A24D64D52826DDCC00C335DE /* CarouselDataModel.swift */,
 				A24D64C02826BBB100C335DE /* Main.storyboard */,
-				A24D64C32826BBB200C335DE /* Assets.xcassets */,
+				A24D64CE2826BC3E00C335DE /* Assets.xcassets */,
 				A24D64C52826BBB200C335DE /* LaunchScreen.storyboard */,
 				A24D64C82826BBB200C335DE /* Info.plist */,
 			);
 			path = CarouselEffect;
+			sourceTree = "<group>";
+		};
+		A24D64D42826DD7800C335DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A24D64D02826BDBD00C335DE /* CustomCollectionViewCell.swift */,
+				A24D64D12826BDBD00C335DE /* CustomCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A24D64CB2826BBB200C335DE /* Build configuration list for PBXNativeTarget "CarouselEffect" */;
 			buildPhases = (
+				624C96723003D463071F9F58 /* [CP] Check Pods Manifest.lock */,
 				A24D64B32826BBB100C335DE /* Sources */,
 				A24D64B42826BBB100C335DE /* Frameworks */,
 				A24D64B52826BBB100C335DE /* Resources */,
+				41BF65150C0BBED7A0046C34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +169,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24D64C72826BBB200C335DE /* LaunchScreen.storyboard in Resources */,
-				A24D64C42826BBB200C335DE /* Assets.xcassets in Resources */,
+				A24D64CF2826BC3E00C335DE /* Assets.xcassets in Resources */,
 				A24D64C22826BBB100C335DE /* Main.storyboard in Resources */,
+				A24D64D32826BDBD00C335DE /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41BF65150C0BBED7A0046C34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarouselEffect/Pods-CarouselEffect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		624C96723003D463071F9F58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarouselEffect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A24D64B32826BBB100C335DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A24D64D82826E49200C335DE /* SceneDelegate.swift in Sources */,
 				A24D64BF2826BBB100C335DE /* ViewController.swift in Sources */,
+				A24D64D62826DDCC00C335DE /* CarouselDataModel.swift in Sources */,
 				A24D64BB2826BBB100C335DE /* AppDelegate.swift in Sources */,
-				A24D64BD2826BBB100C335DE /* SceneDelegate.swift in Sources */,
+				A24D64D22826BDBD00C335DE /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +372,7 @@
 		};
 		A24D64CC2826BBB200C335DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E302A1A26CD552241EC850 /* Pods-CarouselEffect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +401,7 @@
 		};
 		A24D64CD2826BBB200C335DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2947A0196AFE82A9DFAC619E /* Pods-CarouselEffect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

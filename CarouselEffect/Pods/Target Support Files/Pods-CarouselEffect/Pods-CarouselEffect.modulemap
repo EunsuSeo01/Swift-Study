@@ -1,0 +1,6 @@
+framework module Pods_CarouselEffect {
+  umbrella header "Pods-CarouselEffect-umbrella.h"
+
+  export *
+  module * { export * }
+}

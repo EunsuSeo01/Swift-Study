@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CarouselCell" id="gTV-IL-0wX" customClass="CustomCollectionViewCell" customModule="CarouselEffect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="154" height="264"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="154" height="264"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello" translatesAutoresizingMaskIntoConstraints="NO" id="YcS-HH-OLL">
+                        <rect key="frame" x="0.0" y="0.0" width="154" height="204"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-NJ-Y4q">
+                        <rect key="frame" x="0.0" y="204" width="154" height="60"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80392158030000005" blue="0.83529412749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YcS-HH-OLL" secondAttribute="trailing" id="6Wl-8W-dQA"/>
+                <constraint firstAttribute="bottom" secondItem="YcS-HH-OLL" secondAttribute="bottom" constant="60" id="9Cu-lI-4fB"/>
+                <constraint firstItem="fcf-NJ-Y4q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DE5-bB-LVn"/>
+                <constraint firstItem="YcS-HH-OLL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KYn-u2-WJs"/>
+                <constraint firstItem="YcS-HH-OLL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="P62-OJ-Ytx"/>
+                <constraint firstItem="fcf-NJ-Y4q" firstAttribute="top" secondItem="YcS-HH-OLL" secondAttribute="bottom" id="bQa-p7-t0q"/>
+                <constraint firstAttribute="trailing" secondItem="fcf-NJ-Y4q" secondAttribute="trailing" id="czF-tN-WrJ"/>
+                <constraint firstAttribute="bottom" secondItem="fcf-NJ-Y4q" secondAttribute="bottom" id="wI6-zr-zSB"/>
+            </constraints>
+            <size key="customSize" width="154" height="253"/>
+            <connections>
+                <outlet property="cellImageView" destination="YcS-HH-OLL" id="dWO-TF-ftU"/>
+                <outlet property="cellLabel" destination="fcf-NJ-Y4q" id="72i-fo-44a"/>
+            </connections>
+            <point key="canvasLocation" x="213.04347826086959" y="177.45535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="hello" width="320" height="320"/>
+    </resources>
+</document>
