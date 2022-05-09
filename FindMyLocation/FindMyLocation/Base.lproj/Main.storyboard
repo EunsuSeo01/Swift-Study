@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="80" id="QvK-IH-PsU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbM-xE-olp">
@@ -54,13 +54,14 @@
                             <constraint firstItem="j5B-R8-yGQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uy9-9B-Lqb"/>
                             <constraint firstItem="4hd-Dg-n1l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aUg-uf-xQN"/>
                             <constraint firstItem="j5B-R8-yGQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="acu-Q1-mwY"/>
-                            <constraint firstItem="dbM-xE-olp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n78-dt-RlN"/>
                             <constraint firstAttribute="bottom" secondItem="j5B-R8-yGQ" secondAttribute="bottom" id="s7f-Dm-0UK"/>
                             <constraint firstItem="AUe-Uo-JA8" firstAttribute="centerY" secondItem="dbM-xE-olp" secondAttribute="centerY" id="trv-Pd-TkH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="findMyLocationButton" destination="dbM-xE-olp" id="yYy-Mj-Ofp"/>
                         <outlet property="mainBackgroundImageView" destination="j5B-R8-yGQ" id="Dg2-D7-NA2"/>
+                        <outlet property="myLocationLabel" destination="4hd-Dg-n1l" id="j0u-3Y-iUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
