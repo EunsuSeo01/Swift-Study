@@ -19,14 +19,44 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="j5B-R8-yGQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-Dg-n1l">
+                                <rect key="frame" x="30" y="54" width="354" height="80"/>
+                                <color key="backgroundColor" red="0.090196087960000004" green="0.062745101750000004" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QvK-IH-PsU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbM-xE-olp">
+                                <rect key="frame" x="30" y="760" width="354" height="92"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="findMyLocation" title=""/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find My Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-Uo-JA8">
+                                <rect key="frame" x="142" y="795.5" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4hd-Dg-n1l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2Dw-dV-Adv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5B-R8-yGQ" secondAttribute="trailing" id="97M-Uc-oX8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbM-xE-olp" secondAttribute="trailing" constant="30" id="CN9-yb-rWA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4hd-Dg-n1l" secondAttribute="trailing" constant="30" id="ONh-sz-2Qq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dbM-xE-olp" secondAttribute="bottom" constant="10" id="QNL-TQ-1iK"/>
+                            <constraint firstItem="dbM-xE-olp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QVY-Xz-5CV"/>
+                            <constraint firstItem="AUe-Uo-JA8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2o-lK-3Q0"/>
                             <constraint firstItem="j5B-R8-yGQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uy9-9B-Lqb"/>
+                            <constraint firstItem="4hd-Dg-n1l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aUg-uf-xQN"/>
                             <constraint firstItem="j5B-R8-yGQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="acu-Q1-mwY"/>
+                            <constraint firstItem="dbM-xE-olp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n78-dt-RlN"/>
                             <constraint firstAttribute="bottom" secondItem="j5B-R8-yGQ" secondAttribute="bottom" id="s7f-Dm-0UK"/>
+                            <constraint firstItem="AUe-Uo-JA8" firstAttribute="centerY" secondItem="dbM-xE-olp" secondAttribute="centerY" id="trv-Pd-TkH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -40,6 +70,7 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
+        <image name="findMyLocation" width="326" height="78"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
