@@ -57,3 +57,24 @@ class ViewController: UIViewController {
 
 ![End Banner](Documentation/readme-end-banner.png)
 
+---
+### My Note
+
+챌린지 정답 - 초를 카운트 하는 방법 말고, 아예 코드를 특정 시간동안 **block**시키는 방법이 따로 있었다.   
+-> **asyncAfter deadline**을 사용!!! 훨씬 간결하게 완성 가능.
+
+```
+DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    sender.layer.opacity = 1.0
+}
+```
+
+- DispatchQueue.main.asyncAfter deadline
+    - Schedules a block for execution using the specified attributes, and returns immediately.
+      = 지정된 특성을 사용하여 block(실행 차단)을 실행하도록 예약하고, 즉시 반환한다.
+        
+- parameter - deadline
+    - The time at which to schedule the block for execution.
+        = 실행 차단을 예약해둔 시간. 얼만큼 차단할지.  
+
+그리고 나는 sender.layer.opacity를 통해 불투명도를 설정했지만, 정답에서는 sender.**alpha**를 통해 불투명도 값을 조절했다.
