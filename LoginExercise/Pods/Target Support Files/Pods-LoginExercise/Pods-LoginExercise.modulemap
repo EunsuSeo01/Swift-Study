@@ -1,0 +1,6 @@
+framework module Pods_LoginExercise {
+  umbrella header "Pods-LoginExercise-umbrella.h"
+
+  export *
+  module * { export * }
+}
